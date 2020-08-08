@@ -12,4 +12,6 @@ services:
       url: ${URL}
       database__client: sqlite3
       mail__transport: SMTP
-      mail__from: ${HOST_EMAIL}
+      mail__options__service: Mailgun
+      mail__options__auth__user: ${EMAIL_USER}
+      mail__options__auth__pass: ${EMAIL_PASS}
